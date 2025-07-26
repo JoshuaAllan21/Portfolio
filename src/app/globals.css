@@ -1,0 +1,182 @@
+@import 'tailwindcss';
+
+[data-theme='light'] {
+    --p: #eaf7fa;      /* light blue-green background */
+    --pc: #15325b;     /* navy text */
+    --s: #d1f5ee;      /* pale green section */
+    --sc: #146c60;     /* teal-green for section content */
+    --tc: #1e3a8a;     /* deep blue for tertiary content */
+    --a: #2dd4bf;      /* vibrant green-blue accent (teal) */
+    --n: #1e3656;      /* blue-gray for neutral text */
+    --b: #bfe6fc;      /* blue-green border */
+    --marquee: #c8ffe4;/* light green accent */
+
+    /* for logo */
+    --gradient-start: #2563eb;  /* blue */
+    --gradient-mid: #2dd4bf;    /* teal-green */
+    --gradient-end: #bbf7d0;    /* pale green */
+}
+
+[data-theme='dark'] {
+    --p: #0f172a;      /* deep navy background */
+    --pc: #e0f7fa;     /* pale blue-green text */
+    --s: #134e4a;      /* dark teal section */
+    --sc: #38bdf8;     /* blue accent */
+    --tc: #5eead4;     /* green accent for tertiary */
+    --a: #14b8a6;      /* teal accent */
+    --n: #e0f2f1;      /* pale neutral */
+    --b: #164e63;      /* dark blue-green border */
+    --marquee: #115e59;/* dark teal accent */
+
+    /* for logo */
+    --gradient-start: #38bdf8;
+    --gradient-mid: #14b8a6;
+    --gradient-end: #0f766e;
+}
+
+[data-theme='aqua'] {
+    --p: #2dd4bf;
+    --pc: #e0f7fa;
+    --s: #164e63;
+    --sc: #38bdf8;
+    --tc: #bbf7d0;
+    --a: #0ea5e9;
+    --n: #e0f7fa;
+    --b: #1e293b;
+    --marquee: #bbf7d0;
+
+    /* for logo */
+    --gradient-start: #2dd4bf;
+    --gradient-mid: #38bdf8;
+    --gradient-end: #0ea5e9;
+}
+
+[data-theme='retro'] {
+    --p: #e0ffe7;
+    --pc: #135c43;
+    --s: #b9fff3;
+    --sc: #2563eb;
+    --tc: #3b8279;
+    --a: #2dd4bf;
+    --n: #135c43;
+    --b: #bbf7d0;
+    --marquee: #b9fff3;
+
+    /* for logo */
+    --gradient-start: #2563eb;
+    --gradient-mid: #2dd4bf;
+    --gradient-end: #135c43;
+}
+
+@theme {
+    --color-primary: var(--p);
+    --color-primary-content: var(--pc);
+    --color-secondary: var(--s);
+    --color-secondary-content: var(--sc);
+    --color-tertiary-content: var(--tc);
+    --color-accent: var(--a);
+    --color-neutral: var(--n);
+    --color-border: var(--b);
+    --color-marquee: var(--marquee);
+    --color-tag: #2dd4bf;
+
+    --animate-fade-in: fade-in 0.5s ease-out 1;
+    --animate-blink: blink 0.8s ease-in-out infinite;
+    --animate-fade-up: fade-up 0.3s ease-out 1;
+
+    --background-image-large-glow: url('../assets/images/bg-lg.svg');
+    --background-image-small-glow: url('../assets/images/bg-sm.svg');
+    --background-image-skill-gradient: linear-gradient(to right, var(--p), #134e4a, var(--p));
+
+    --background-position-large-glow-position: 110% 30%;
+    --background-position-small-glow-position: 50% 600%;
+
+    --font-fira-code: Fira Code, monospace;
+    --font-inter: Inter, sans-serif;
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @keyframes fade-up {
+        0% {
+            top: 5px;
+        }
+        100% {
+            top: 0px;
+        }
+    }
+}
+
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-border, currentColor);
+    }
+}
+
+html {
+    scroll-behavior: smooth !important;
+    scrollbar-width: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+body {
+    font-family: 'Fira Code', monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    @apply bg-primary text-neutral;
+}
+
+.rehype-code-title {
+    @apply text-primary-content rounded-t-md bg-[#05101a] px-6 py-3 text-sm font-medium;
+}
+
+h2,
+h3 {
+    scroll-margin-top: 5.25rem;
+}
+
+section {
+    scroll-margin-top: 1.5rem;
+}
+
+@supports (-webkit-hyphens: none) {
+    * {
+        scroll-margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h2,
+    h3 {
+        scroll-margin-top: 1.5rem;
+    }
+}
+
+.hide-scrollbar {
+    -webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+}

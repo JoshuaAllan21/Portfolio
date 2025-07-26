@@ -1,0 +1,9 @@
+{
+  "priority": 1,
+  "title": "Neural Network Stock Trading Dissertation",
+  "shortDescription": "BSc Computer Science Dissertation (86.3%) — Developed an advanced neural network trading bot for predicting weekly trends and daily low prices in European and US stock markets. Used hybrid LSTM-CNN models, dynamic position sizing, trailing stop loss, sentiment analysis, and a custom backtesting simulator. Compared results against market returns and alternative models using real market data and statistical tests.",
+  "cover": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=900&q=80",
+  "livePreview": "",
+  "type": "Academic Dissertation 📈",
+  "siteAge": "Completed 2025"
+}
