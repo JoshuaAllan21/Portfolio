@@ -1,7 +1,7 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 interface ServiceCardTypes {
-  icon: string
+  icon: string | StaticImageData
   title: string
   shortDescription: string
 }
@@ -18,5 +18,5 @@ const ServiceCard: React.FC<ServiceCardTypes> = ({ title, shortDescription, icon
   )
 }
 
-
 export default ServiceCard
+
