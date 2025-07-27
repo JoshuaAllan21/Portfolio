@@ -1,9 +1,9 @@
 {
   "priority": 2,
-  "title": "Codevertiser",
-  "shortDescription": "A programming related article site to share my learnings",
-  "cover": "https://res.cloudinary.com/dyvkdwzcj/image/upload/v1656970810/Codevertiser_xlxdje.png",
-  "livePreview": "https://example.com/beta",
-  "visitors": "8K Visitors",
-  "earned": "$400 Earned"
+  "title": "AI Train Chatbot Assistant",
+  "shortDescription": "BSc Computer Science Project — Developed an intelligent train chatbot capable of predicting delays, booking tickets, and holding natural conversations. Utilized NLP models for dialogue, integrated with live transport data APIs, and deployed a conversational UI for practical use. Focused on improving accessibility, user experience, and travel reliability.",
+  "cover": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=900&q=80",
+  "livePreview": "",
+  "type": "University Project 🚆",
+  "siteAge": "Completed 2025"
 }
