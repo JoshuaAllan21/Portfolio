@@ -1,6 +1,7 @@
 import { serviceData } from '../../appData'
 import SectionHeading from '../SectionHeading/SectionHeading'
 import ServiceCard from './ServiceCard'
+import { StaticImageData } from 'next/image'
 
 const ServiceSection = () => {
   return (
@@ -14,7 +15,7 @@ const ServiceSection = () => {
         {serviceData.map((service, index) => (
           <ServiceCard
             key={index}
-            icon={service.icon}
+            icon={service.icon as string | StaticImageData} 
             title={service.title}
             shortDescription={service.shortDescription}
           />
@@ -25,3 +26,4 @@ const ServiceSection = () => {
 }
 
 export default ServiceSection
+
