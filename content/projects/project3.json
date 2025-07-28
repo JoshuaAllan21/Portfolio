@@ -1,11 +1,11 @@
 {
   "priority": 3,
-  "title": "Project Epsilon",
-  "shortDescription": "A collection of engaging coding challenges designed to help developers improve their ReactJS skills by writing functional business logic. Your task is to make it functional by writing business logic, to improve your frontend skills",
-  "cover": "https://res.cloudinary.com/dyvkdwzcj/image/upload/v1656971294/waitlist-template_qr4l9k.png",
-  "type": "Free 🔥",
-  "livePreview": "https://example.com/epsilon",
-  "githubLink": "https://github.com/example/ReactJS-Coding-Challenges",
-  "githubStars": "40 Stars",
-  "numberOfSales": "138 Sales"
+  "title": "Smart Auction Bidding Platform",
+  "shortDescription": "Academic Duo Project — Built a full-stack online auction platform inspired by eBay, allowing users to create listings, place real-time bids, and manage auctions via a modern web interface. Integrated mock payment flows, user authentication, and dynamic countdown timers. Developed with Next.js, Node.js, and Tailwind CSS. Focused on reliability, user experience, and full auction lifecycle — without real currency integration.",
+  "cover": "https://res.cloudinary.com/dyvkdwzcj/image/upload/v1598035107/pomodoro-clock_ctp2af.png",
+  "livePreview": "",
+  "type": "Academic Project 🧑‍💻",
+  "siteAge": "Completed 2025"
 }
+
+

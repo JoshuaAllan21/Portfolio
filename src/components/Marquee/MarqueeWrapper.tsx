@@ -12,17 +12,21 @@ type MarqueeAnimationType = (
   windowWidth: number,
 ) => void
 
-const marqueeAnimation: MarqueeAnimationType = (element, elementWidth, windowWidth) => {
-  element.animate(
-    [{ transform: 'translateX(0)' }, { transform: `translateX(${windowWidth - elementWidth}px)` }],
-    {
-      duration: 20000,
-      easing: 'linear',
-      direction: 'alternate',
-      iterations: Infinity,
-    },
-  )
+const marqueeAnimation: MarqueeAnimationType = (element, elementWidth, _windowWidth) => {
+    element.animate(
+        [
+            { transform: 'translateX(0)' },
+            { transform: `translateX(-${elementWidth}px)` },
+        ],
+        {
+            duration: 20000,
+            easing: 'linear',
+            iterations: Infinity,
+            direction: 'normal',
+        }
+    )
 }
+
 
 const MarqueeWrapper: React.FC<MarqueeWrapperProps> = ({ children, className = '' }) => {
   const elementRef = useRef<HTMLDivElement>(null)

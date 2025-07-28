@@ -1,12 +1,12 @@
 {
   "priority": 4,
-  "title": "Ejucationzz",
-  "shortDescription": "Ejucationzz is a directory site I created for myself using Next.js. On Ejucationzz, you can find free and paid online and offline courses available in Pakistan. 14 academies and 12 main categories, each with subcategories, have been listed.",
+  "title": "Dawkins Analytics",
+  "shortDescription": "Dawkins Analytics is a comprehensive data analytics and insights platform built using Next.js. It provides powerful data visualization, reporting tools, and automated analytics workflows to help businesses make data-driven decisions efficiently.",
   "cover": "https://res.cloudinary.com/dyvkdwzcj/image/upload/v1598035107/pomodoro-clock_ctp2af.png",
   "type": "New 🔥",
-  "livePreview": "https://example.com/Ejucationzz",
+  "livePreview": "https://joshua-allan-portfolio.netlify.app",
   "siteAge": "4 months old",
   "visitors": "100 Visitors",
-  "githubLink": "",
-  "earned": ""
+  "githubLink": "https://github.com/JoshuaAllan21/DawkinsAnalytics.git",
+  "earned": "300"
 }
