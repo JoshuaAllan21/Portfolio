@@ -56,6 +56,9 @@ export const groupedSkills = {
     { name: 'SQL', icon: SQLIcon },
     { name: 'Java', icon: JavaIcon },
     { name: 'F#', icon: FSharpIcon },
+    // { name: 'C++', icon: CppIcon },
+    // { name: 'C', icon: CIcon }, // NEW (OS Programming)
+    // { name: 'Assembly', icon: AssemblyIcon }, // NEW (Low-Level Architecture)
     { name: 'HTML', icon: HTMLIcon },
     { name: 'CSS', icon: CSSIcon },
   ],
@@ -79,7 +82,7 @@ export const groupedSkills = {
     { name: 'MySQL', icon: MySQLIcon },
     { name: 'SQLite', icon: SQLiteIcon },
   ],
-  'AI/ML': [
+  'AI/ML & Data': [
     { name: 'TensorFlow', icon: TensorFlowIcon },
     { name: 'Scikit-learn', icon: SklearnIcon },
     { name: 'PyTorch', icon: PyTorchIcon },
@@ -87,17 +90,30 @@ export const groupedSkills = {
     { name: 'NumPy', icon: NumpyIcon },
     { name: 'Matplotlib', icon: MatplotlibIcon },
     { name: 'Neural Networks', icon: NeuralNetIcon },
-    { name: 'Sentiment Analysis', icon: SentimentIcon },
     { name: 'Keras', icon: KerasIcon },
+    { name: 'Sentiment Analysis', icon: SentimentIcon },
+    // { name: 'Natural Language Processing (NLP)', icon: NLPIcon },
+    // { name: 'Information Retrieval (IR)', icon: IRIcon },
+    // { name: 'Search Engine Development', icon: SearchIcon },
   ],
   Techniques: [
+    // { name: 'Software Architecture & Design', icon: ArchitectureIcon },
+    // { name: 'UML & Object-Oriented Modelling', icon: UMLIcon },
+    // { name: 'Software Design Patterns', icon: PatternsIcon },
+    // { name: 'Project Management (Agile)', icon: AgileIcon },
     { name: 'Time Series Forecasting', icon: TimeSeriesIcon },
     { name: 'Backtesting', icon: BacktestIcon },
     { name: 'Model Evaluation', icon: EvaluationIcon },
     { name: 'Data Preprocessing', icon: DataCleanIcon },
     { name: 'Statistical Testing', icon: StatisticsIcon },
+    // { name: 'Relevance Ranking & Evaluation', icon: RankingIcon },
+    // { name: 'TF-IDF & Vector Space Models', icon: TFIDFIcon },
+    // { name: 'Computer Graphics (OpenGL)', icon: OpenGLIcon },
+    // { name: '3D Maths & Visualization', icon: VisualizationIcon },
+    // { name: 'Computer Architecture (ISA, CPU, Memory)', icon: ChipIcon },
+    // { name: 'Operating Systems (Processes, Scheduling, IPC)', icon: OSIcon },
   ],
-}
+};
 
 
 
@@ -163,6 +179,7 @@ export const serviceData = [
   { icon: ueaLogo, title: "Database Systems", shortDescription: "UEA — Year 1" },
   { icon: ueaLogo, title: "Developing Secure Software", shortDescription: "UEA — Year 3" },
   { icon: ueaLogo, title: "Information Retrieval", shortDescription: "UEA — Year 2" },
+  { icon: ueaLogo, title: "Computer Graphics", shortDescription: "UEA — Year 2" },
   { icon: ueaLogo, title: "Advanced Programming F#", shortDescription: "UEA — Year 3" },
   { icon: ueaLogo, title: "Mathematics for Computing", shortDescription: "UEA — Year 1" },
   { icon: ueaLogo, title: "Programming", shortDescription: "UEA — Year 1 & 2" },
