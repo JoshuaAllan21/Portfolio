@@ -29,6 +29,12 @@ export interface EnhancedProject {
   featured?: boolean
   disclaimer?: string
   accentColor?: string
+  tags: string[]
+  problem?: string
+  whatIBuilt?: string
+  technicalDepth?: string[]
+  learned?: string
+  complexityBadges?: string[]
 }
 
 export interface Experience {
@@ -40,6 +46,7 @@ export interface Experience {
   summary: string
   responsibilities: string[]
   technologies: string[]
+  demonstrates?: string[]
 }
 
 export interface Capability {
@@ -51,6 +58,50 @@ export interface EducationModule {
   title: string
   year: string
   group: string
+}
+
+export interface TechnicalDepthCard {
+  id: string
+  code: string
+  title: string
+  description: string
+  skills: string[]
+  accentColor: string
+}
+
+export interface ArchitectureStage {
+  step: number
+  label: string
+  desc: string
+}
+
+export interface ArchitecturePanel {
+  id: string
+  title: string
+  subtitle: string
+  context: string
+  accentColor: string
+  stages: ArchitectureStage[]
+}
+
+export interface BuildQualityPrinciple {
+  number: string
+  title: string
+  description: string
+}
+
+export interface FeaturedSkill {
+  name: string
+  tag: string
+  context: string
+  tools: string[]
+}
+
+export interface SnapshotCard {
+  label: string
+  value: string
+  sub: string
+  accentColor: string
 }
 
 export interface Heading {
