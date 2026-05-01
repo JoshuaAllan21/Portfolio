@@ -14,6 +14,45 @@ export interface Project {
   siteAge?: string
 }
 
+export interface EnhancedProject {
+  id: string
+  title: string
+  type: string
+  status: 'completed' | 'current' | 'in-development'
+  statusLabel: string
+  grade?: string
+  shortDescription: string
+  highlights: string[]
+  techStack: string[]
+  githubLink?: string
+  livePreview?: string
+  featured?: boolean
+  disclaimer?: string
+  accentColor?: string
+}
+
+export interface Experience {
+  company: string
+  companyInitials: string
+  role: string
+  duration: string
+  status: 'current' | 'previous'
+  summary: string
+  responsibilities: string[]
+  technologies: string[]
+}
+
+export interface Capability {
+  title: string
+  description: string
+}
+
+export interface EducationModule {
+  title: string
+  year: string
+  group: string
+}
+
 export interface Heading {
   id: string
   title: string

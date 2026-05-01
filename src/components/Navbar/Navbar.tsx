@@ -7,66 +7,49 @@ import { BurgerIcon, CloseIcon } from '../../utils/icons'
 import Logo from './Logo'
 
 const navItems = [
-  {
-    label: 'home',
-    href: '/',
-  },
-  {
-    label: 'projects',
-    href: '/#projects',
-  },
-  {
-    label: 'services',
-    href: '/#services',
-  },
-  {
-    label: 'contact-me',
-    href: '/#contact',
-  },
+  { label: 'About', href: '/#about' },
+  { label: 'Experience', href: '/#experience' },
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Dissertation', href: '/#dissertation' },
+  { label: 'Skills', href: '/#skills' },
+  { label: 'Education', href: '/#education' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false)
   const pathname = usePathname()
 
-  const toggleMenu = () => {
-    setIsVisible(!isVisible)
-  }
+  const toggleMenu = () => setIsVisible((prev) => !prev)
 
   return (
-    <nav className="bg-primary border-border h-16 overflow-hidden border-b">
-      <div className="mx-auto flex h-full w-dvw max-w-[1200px] items-center justify-between px-4 py-1">
-        {isVisible ? (
-          <div className="text-primary-content md:hidden">_menu</div>
-        ) : (
-          <Link href="/">
-            <div className="animate-fade-up text-primary-content relative flex items-center gap-3 transition-all duration-300 md:static">
-              <Logo />
-              <span className="text-primary-content">Joshua Allan</span>
-            </div>
-          </Link>
-        )}
+    <nav className="bg-primary/95 border-border sticky top-0 z-50 h-16 border-b backdrop-blur-md">
+      <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-4">
+        {/* Logo */}
+        <Link href="/" onClick={() => setIsVisible(false)} aria-label="Joshua Allan — Home">
+          <div className="text-primary-content flex items-center gap-2 transition-opacity duration-200 hover:opacity-80">
+            <Logo />
+            <span className="font-medium">Joshua Allan</span>
+          </div>
+        </Link>
 
-        <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isVisible ? (
-              <CloseIcon className="text-primary-content" />
-            ) : (
-              <BurgerIcon className="text-primary-content" />
-            )}
-          </button>
-        </div>
+        {/* Mobile menu toggle */}
+        <button
+          onClick={toggleMenu}
+          aria-label={isVisible ? 'Close menu' : 'Open menu'}
+          aria-expanded={isVisible}
+          className="text-primary-content md:hidden">
+          {isVisible ? <CloseIcon /> : <BurgerIcon />}
+        </button>
 
+        {/* Nav links */}
         <ul
-          className={`${isVisible ? 'flex' : 'hidden'} animate-fade-in bg-primary absolute top-16 left-0 z-10 h-dvh w-dvw flex-col md:static md:top-0 md:flex md:h-full md:w-[72%] md:flex-row lg:w-[70%]`}>
+          className={`${isVisible ? 'flex' : 'hidden'} animate-fade-in bg-primary/95 border-border absolute top-16 left-0 z-10 h-dvh w-full flex-col border-b backdrop-blur-md md:static md:flex md:h-auto md:w-auto md:flex-row md:items-center md:gap-1 md:border-0 md:bg-transparent md:backdrop-blur-none`}>
           {navItems.map(({ label, href }) => (
-            <li
-              key={href}
-              onClick={() => setIsVisible(false)}
-              className="border-border flex items-center border-b px-4 text-2xl md:border-y-0 md:border-e md:text-base md:first:border-s md:last:ml-auto md:last:border-none md:last:px-0 lg:px-8">
+            <li key={href} onClick={() => setIsVisible(false)}>
               <Link
                 href={href}
-                className={`text-primary-content hover:text-neutral w-full py-7 transition-all duration-150 md:py-0 ${pathname === href ? 'text-neutral cursor-text' : ''}`}>
+                className={`text-primary-content hover:text-accent block px-4 py-5 text-2xl transition-colors duration-150 md:py-1 md:text-sm ${pathname === href ? 'text-accent' : ''}`}>
                 {label}
               </Link>
             </li>

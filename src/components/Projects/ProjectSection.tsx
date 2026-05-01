@@ -1,19 +1,18 @@
-import { Project } from '@/lib/types'
+import { enhancedProjects } from '@/appData'
 import SectionHeading from '../SectionHeading/SectionHeading'
 import ProjectCard from './ProjectCard'
 
-interface ProjectSectionProps {
-  projects: Project[]
-}
-
-const ProjectSection: React.FC<ProjectSectionProps> = ({ projects }) => {
+const ProjectSection = () => {
   return (
-    <section id="projects">
-      <SectionHeading title="Projects" />
+    <section id="projects" className="my-14">
+      <SectionHeading
+        title="Featured Projects"
+        subtitle="A selection of personal, academic, and ongoing engineering projects across FinTech, AI/ML, and full-stack development."
+      />
 
-      <div className="my-8 grid grid-cols-1 gap-8 md:my-12 md:grid-cols-2">
-        {projects.map((project) => (
-          <ProjectCard key={project.priority} data={project} />
+      <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
+        {enhancedProjects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </section>

@@ -9,10 +9,9 @@ type MarqueeWrapperProps = {
 type MarqueeAnimationType = (
   element: HTMLElement,
   elementWidth: number,
-  windowWidth: number,
 ) => void
 
-const marqueeAnimation: MarqueeAnimationType = (element, elementWidth, _windowWidth) => {
+const marqueeAnimation: MarqueeAnimationType = (element, elementWidth) => {
     element.animate(
         [
             { transform: 'translateX(0)' },
@@ -37,7 +36,7 @@ const MarqueeWrapper: React.FC<MarqueeWrapperProps> = ({ children, className = '
 
     if (elementRef.current) {
       const elementWidth = elementRef.current.getBoundingClientRect().width
-      marqueeAnimation(elementRef.current as HTMLElement, elementWidth, windowWidth)
+      marqueeAnimation(elementRef.current as HTMLElement, elementWidth)
     }
 
     const handleResize = () => setWindowWidth(window.innerWidth)

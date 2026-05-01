@@ -8,10 +8,10 @@ import { Fira_Code } from 'next/font/google'
 
 const firaCode = Fira_Code({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] })
 
-const title = 'Joshua Allan | Looking for Job'
+const title = 'Joshua Allan | Graduate RegTech Engineer | Software Developer Portfolio'
 
 const description =
-  "description: \"First-Class Computer Science graduate from the University of East Anglia, specialising in AI, machine learning, and stock market automation. Experienced in React, Next.js, Python, and fintech. Actively seeking graduate roles in software or financial technology.\",\n"
+  'Portfolio of Joshua Allan, a First-Class Computer Science graduate and Graduate RegTech Engineer at Suade Labs, focused on fintech, regtech, AI/ML, backend systems, and full-stack web applications.'
 
 const url = process.env.NEXT_PUBLIC_SITE_URL
 
@@ -19,6 +19,21 @@ export const metadata: Metadata = {
   title,
   description,
   category: 'technology',
+  keywords: [
+    'Joshua Allan',
+    'Graduate Software Engineer',
+    'Graduate RegTech Engineer',
+    'Junior Software Developer',
+    'FinTech Developer',
+    'RegTech',
+    'AI/ML',
+    'Python Developer',
+    'React Developer',
+    'Next.js Developer',
+    'University of East Anglia Computer Science',
+    'Stock Trading Dissertation',
+    'Suade Labs',
+  ],
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
   alternates: {
     canonical: url,
